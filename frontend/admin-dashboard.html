@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Attendance System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="top-navbar">
+        <div class="navbar-left">
+            <span class="navbar-title">Attendance System</span>
+        </div>
+        <div class="navbar-right">
+            <span class="user-icon" title="Admin">&#128100;</span>
+            <a href="../frontend/admin-login.html" class="btn logout-btn">Logout</a>
+        </div>
+    </nav>
+    <div class="main-layout">
+        <aside class="sidebar-nav">
+            <a href="admin-dashboard.html" class="sidebar-link active"><span class="sidebar-icon">🏠</span> Dashboard</a>
+            <a href="students.html" class="sidebar-link"><span class="sidebar-icon">👨‍🎓</span> Students</a>
+            <a href="teachers.html" class="sidebar-link"><span class="sidebar-icon">👩‍🏫</span> Teachers</a>
+            <a href="classes.html" class="sidebar-link"><span class="sidebar-icon">🏫</span> Classes</a>
+            <a href="enroll.html" class="sidebar-link"><span class="sidebar-icon">🔗</span> Enroll</a>
+            <a href="bulk_attendance.html" class="sidebar-link"><span class="sidebar-icon">📝</span> Bulk Attendance</a>
+            <a href="attendance.html" class="sidebar-link"><span class="sidebar-icon">📋</span> Attendance Records</a>
+            <a href="reports.html" class="sidebar-link"><span class="sidebar-icon">📊</span> Reports</a>
+        </aside>
+        <div class="container dashboard-content">
+            <header>
+                <h2>Admin Dashboard</h2>
+            </header>
+            <main>
+                <p style="margin-bottom: 24px;">Welcome, Admin! Use the navigation to manage the system.</p>
+                <section class="quick-stats">
+                    <div class="stat-card">
+                        <div class="stat-label">Total Students</div>
+                        <div class="stat-value" id="statStudents">-</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-label">Total Teachers</div>
+                        <div class="stat-value" id="statTeachers">-</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-label">Total Classes</div>
+                        <div class="stat-value" id="statClasses">-</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-label">Attendance Records</div>
+                        <div class="stat-value" id="statAttendance">-</div>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+    <script src="dashboard_stats.js"></script>
+</body>
+</html>

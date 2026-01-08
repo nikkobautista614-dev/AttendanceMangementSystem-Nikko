@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bulk Attendance - Attendance System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="top-navbar">
+        <div class="navbar-left">
+            <span class="navbar-title">Attendance System</span>
+        </div>
+        <div class="navbar-right">
+            <span class="user-icon" title="Admin">&#128100;</span>
+            <a href="../frontend/admin-login.html" class="btn logout-btn">Logout</a>
+        </div>
+    </nav>
+    <div class="main-layout">
+        <aside class="sidebar-nav">
+            <a href="admin-dashboard.html" class="sidebar-link"><span class="sidebar-icon">🏠</span> Dashboard</a>
+            <a href="students.html" class="sidebar-link"><span class="sidebar-icon">👨‍🎓</span> Students</a>
+            <a href="teachers.html" class="sidebar-link"><span class="sidebar-icon">👩‍🏫</span> Teachers</a>
+            <a href="classes.html" class="sidebar-link"><span class="sidebar-icon">🏫</span> Classes</a>
+            <a href="enroll.html" class="sidebar-link"><span class="sidebar-icon">🔗</span> Enroll</a>
+            <a href="bulk_attendance.html" class="sidebar-link active"><span class="sidebar-icon">📝</span> Bulk Attendance</a>
+            <a href="attendance.html" class="sidebar-link"><span class="sidebar-icon">📋</span> Attendance Records</a>
+            <a href="reports.html" class="sidebar-link"><span class="sidebar-icon">📊</span> Reports</a>
+        </aside>
+        <div class="container dashboard-content">
+            <header>
+                <h2>Bulk Attendance</h2>
+            </header>
+            <main>
+                <form id="bulkAttendanceForm">
+                    <select id="bulkClassSelect" required>
+                        <option value="">Select Class</option>
+                    </select>
+                    <input type="date" id="bulkAttendanceDate" required>
+                    <button type="button" id="loadStudentsBtn" class="btn">Load Students</button>
+                </form>
+                <div id="bulkAttendanceSection" style="display:none;">
+                    <button type="button" id="markAllPresent" class="btn">Mark All Present</button>
+                    <button type="button" id="clearAll" class="btn">Clear All</button>
+                    <form id="submitBulkAttendance">
+                        <table id="bulkAttendanceTable">
+                            <thead>
+                                <tr><th>Student</th><th>Status</th></tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
+                        <button type="submit" class="btn">Submit Attendance</button>
+                    </form>
+                </div>
+            </main>
+        </div>
+    </div>
+    <script src="bulk_attendance.js"></script>
+</body>
+</html>
